@@ -3,7 +3,6 @@ import Main from '../components/Main';
 import Sidebar from '../components/Sidebar';
 import Info from '../components/Info';
 import About from '../components/About';
-import Social from '../components/Social';
 import Education from '../components/Education';
 import Experince from '../components/Experiences';
 import Certificate from '../components/Certificate';
@@ -13,23 +12,21 @@ import useGetData from '../hooks/useGetData'
 const App = ()=>{
 
     const data = useGetData();
-    console.log()
-    return(
+    return data.length === 0 ?<h1>Cargando</h1> : (
         <Main>
             <Sidebar>
                 <About
                     avatar={data.avatar}
-                    name={"Alvaro Castillo"|| data.address}
+                    name={ data.name}
                     profession={data.profession}
                     bio={data.bio}
-                    address={"Puebla,Mexico" || data.address }
+                    address={data.address }
                     social={data.social}
                 />
             </Sidebar>
             <Info>
                 <Education
-                    education={data.education}
-                    
+                    data={data.education}  
                 />
                 <Experince
                       data={data.experience}

@@ -3,7 +3,7 @@ import {useState,useEffect} from 'react';
 const useGetData = () =>{
 
     const [mydata,setData]= useState([])
-    const api = 'https://us-central1-gndx-cv.cloudfunctions.net/me'
+    const api = 'https://cv-alvaro.firebaseio.com/cvAlvaro.json'
     
     useEffect (()=>{
         fetch(api)
