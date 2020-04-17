@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Skills = ({children})=>(
+const Skills = ({ children }) => (
     <div className="Skills">
         <div className="Skills-container">
             <div className="Skills-iteam">

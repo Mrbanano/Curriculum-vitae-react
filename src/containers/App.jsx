@@ -7,7 +7,7 @@ import Social from '../components/Social';
 import Education from '../components/Education';
 import Experince from '../components/Experiences';
 import Certificate from '../components/Certificate';
-import Skills from '../Skills';
+import Skills from '../components/Skills';
 
 const App = ()=>{
     return(
