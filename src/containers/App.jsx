@@ -14,7 +14,6 @@ const App = ()=>{
         <Main>
             <Sidebar>
                 <About></About>
-                <Social></Social>
             </Sidebar>
             <Info>
                 <Education></Education>
