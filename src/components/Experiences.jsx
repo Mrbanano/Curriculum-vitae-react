@@ -1,16 +1,18 @@
 import React from 'react'; 
 
 
-const Experiences = ({children})=>(
+const Experiences = props =>(
     <div className="Experiences">
         <div className="Experiences-container">
-            <div className="Experiences-item">
-                <h3>Instituto</h3>
-                <p>aprendi mucho</p>
-            </div>
+            {props.data.map(( xp , index) => (
+                <div className="Experiences-item" key={`Xp-${index}`}>
+                    <h3>{xp.jobTitle+"  "+xp.company}</h3>
+                    <span>{xp.startDate+"-"+xp.endDate}</span>
+                    <p>{xp.jobDescription}</p>
+                </div>
+            ))}  
         </div>
     </div>
 );
-
 
 export default Experiences;
