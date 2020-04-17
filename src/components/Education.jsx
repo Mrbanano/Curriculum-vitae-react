@@ -1,13 +1,15 @@
 import React from 'react';
 
 
-const Education = ({ children }) => (
+const Education = ({education}) => (
     <div className="Education">
         <div className="Education-container">
-            <div className="Education-item">
-                <h3>Instituto</h3>
-                <p>aprendi mucho</p>
-            </div>
+            {
+               education.map((edu,index)=>(
+                   <div>hola</div>
+               ))
+            }
+        
         </div>
     </div>
 );
