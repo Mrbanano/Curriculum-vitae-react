@@ -1,7 +1,16 @@
 import React from 'react';
+import Social from './Social'
+import styled from 'styled-components';
+
+const AboutStyle = styled.div`
+    text-align:center;
+`;
+
+
+
 
 const About = ({avatar,name,bio,profession,address,social}) => (
-    <div className="About">
+    <AboutStyle>
         <div className="About-container">
             <div className="About-avatar">
                 <figure>
@@ -29,10 +38,12 @@ const About = ({avatar,name,bio,profession,address,social}) => (
                 </address>
             </div>
             <div className="About-social">
-                Redes sociales
+                <Social 
+                    social={social}
+                />
             </div>
         </div>
-    </div>
+    </AboutStyle>
 );
 
 export default About;
