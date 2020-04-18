@@ -1,5 +1,5 @@
 import React from 'react';
-import {createGlobalStyle} from 'styled-components';
+import styled, {createGlobalStyle} from 'styled-components';
 import Main from '../components/Main';
 import Sidebar from '../components/Sidebar';
 import Info from '../components/Info';
@@ -21,11 +21,18 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 
+const LoadingImg = styled.img`
+    display:grid;
+    grid-template-columns:1fr;
+    margin: 0 auto;
+    padding-top:50%;
+`;
+
 
 const App = ()=>{
 
     const data = useGetData();
-    return data.length === 0 ?<h1>Cargando</h1> : (
+    return data.length === 0 ?<LoadingImg src="https://www.booooooom.com/wp-content/uploads/2017/12/avatar-green.gif" alt=""/> : (
         <Main>  
             <GlobalStyle></GlobalStyle>
             <Sidebar>
