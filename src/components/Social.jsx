@@ -2,7 +2,7 @@ import React from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 
 
-const socialStyle = styled.div`
+const SocialContainer = styled.div`
    margin: 0 auto;
    display:block;
 `;
@@ -52,7 +52,7 @@ const getColor = (name) =>{
 }
 
 const Social = props => (
-    <socialStyle>
+    <SocialContainer>
         {props.social &&
             <SocialUl>
                 {props.social.map((item, index) => (
@@ -66,7 +66,7 @@ const Social = props => (
                 ))}
             </SocialUl>
         }
-    </socialStyle>
+    </SocialContainer>
 );
 
 export default Social;
