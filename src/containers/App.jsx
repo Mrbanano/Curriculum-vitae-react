@@ -13,7 +13,7 @@ const App = ()=>{
 
     const data = useGetData();
     return data.length === 0 ?<h1>Cargando</h1> : (
-        <Main>
+        <Main>  
             <Sidebar>
                 <About
                     avatar={data.avatar}
