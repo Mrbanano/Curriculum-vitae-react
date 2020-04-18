@@ -1,5 +1,5 @@
 import React from 'react';
-import styled,{keyframes} from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import H3Styled from '../styled/H3Styled';
 import H2Sthyled from '../styled/H2Styled';
 
@@ -17,12 +17,12 @@ const SkillsH5 = styled.h5`
 `;
 
 const SkillsLine = styled.div`
-    background-color : #F8BBD0;
+    background-color :#86E04A;
     height: 8px;
     position: relative;
     border-radius:50px;
 `;
-const move =keyframes`
+const move = keyframes`
     0%{background-position: 0 0;}
     100%{background-position: 50px 50px;}
 `;
@@ -32,7 +32,7 @@ const SkillsSpan = styled.span`
     height:100%;
     width: ${props => props.width};
     border-radius: 8px ;
-    background-color: #C2185b;
+    background-color:  #86E04A;
     overflow:hidden;
     position:relative;
     box-shadow: inset 0 2px 9px rgba(255,255,255,0.3),
@@ -48,8 +48,7 @@ const SkillsSpan = styled.span`
         z-index:1;
         background-size:50px 50px ;
         animation: ${move} 4s linear infinite;
-        overflow:hidden;
-        
+        overflow:hidden;     
     }  
 `;
 
@@ -75,22 +74,22 @@ const Skills = props => (
                 ))}
             </div>
             <div className="Skills-BackEnd">
-            <H3Styled> BackEnd </H3Styled>
+                <H3Styled> BackEnd </H3Styled>
                 {props.data.skillsBackEnd.map((Back, index) => (
                     <div className="Skills-item" key={`Back-${index}`}>
                         <SkillsH5>
                             {Back.name}
                         </SkillsH5>
                         <SkillsLine>
-                            <SkillsSpan 
-                                width={Back.percentage}>   
+                            <SkillsSpan
+                                width={Back.percentage}>
                             </SkillsSpan>
                         </SkillsLine>
                     </div>
                 ))}
             </div>
             <div className="Skills-Desing">
-            <H3Styled> Desing </H3Styled>
+                <H3Styled> Desing </H3Styled>
                 {props.data.skillsDesing.map((DS, index) => (
                     <div className="Skills-item" key={`Desing-${index}`}>
                         <SkillsH5>
@@ -105,7 +104,7 @@ const Skills = props => (
                 ))}
             </div>
             <div className="Skills-Hardware">
-            <H3Styled> Hardware </H3Styled>
+                <H3Styled> Hardware </H3Styled>
                 {props.data.skillsHarware.map((Hw, index) => (
                     <div className="Skills-item" key={`HW-${index}`}>
                         <SkillsH5>
@@ -120,7 +119,7 @@ const Skills = props => (
                 ))}
             </div>
             <div className="Skills-Other">
-            <H3Styled> Team Work </H3Styled>
+                <H3Styled> Team Work </H3Styled>
                 {props.data.skillsOther.map((Ot, index) => (
                     <div className="Skills-item" key={`Other-${index}`}>
                         <SkillsH5>
@@ -128,7 +127,7 @@ const Skills = props => (
                         </SkillsH5>
                         <SkillsLine>
                             <SkillsSpan
-                                width={Ot.percentage}>   
+                                width={Ot.percentage}>
                             </SkillsSpan>
                         </SkillsLine>
                     </div>
