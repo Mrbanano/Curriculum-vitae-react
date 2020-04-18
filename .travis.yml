@@ -18,4 +18,4 @@ deploy:
   target-branch: master
   commit_message : "Deploy release ${TRAVIS_TAG}"
   on:
-    banch: develop
+    branch: develop
